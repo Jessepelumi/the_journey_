@@ -8,7 +8,6 @@ This process is repeated till we achieve a sort.
 
 An outer loop that runs through each element of arr.
 An inner loop that comapres each element to the one next to it.
-
 """
 
 def bubbleSort(arr):
@@ -24,7 +23,6 @@ def bubbleSort(arr):
 """
 The first algorith works fine but is ineffective because it runs through every element in the array even if they are already sorted
 The optimized algo checks if any swaps occur. If no swap happens, the array is sorted and the loop is exited early.
-
 """
 
 def bubbleSortOptimized(arr):
@@ -49,7 +47,6 @@ Best case -> O(n) (if already sorted)
 
 Space complexity
 O(1) (since the sorting happens in-place, no extra space is used up)
-
 """
 
 # usage 
