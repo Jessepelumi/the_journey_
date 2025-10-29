@@ -10,7 +10,7 @@ An outer loop that runs through each element of arr.
 An inner loop that comapres each element to the one next to it.
 """
 
-def bubbleSort(arr):
+def bubbleSort(arr:list):
     n = len(arr)
 
     for i in range(n-1):
@@ -25,7 +25,7 @@ The first algorith works fine but is ineffective because it runs through every e
 The optimized algo checks if any swaps occur. If no swap happens, the array is sorted and the loop is exited early.
 """
 
-def bubbleSortOptimized(arr):
+def bubbleSortOptimized(arr:list):
     n = len(arr)
 
     for i in range(n-1):
@@ -49,7 +49,7 @@ Space complexity
 O(1) (since the sorting happens in-place, no extra space is used up)
 """
 
-# usage 
+# Usage 
 arr = [3, 4, 6, 3, 7, 1, 2]
-print(f"Sorted: {bubbleSort(arr)}")
-print(f"Optimized: {bubbleSortOptimized(arr)}")
+print(f"Sorted: {bubbleSort(arr.copy())}")
+print(f"Optimized: {bubbleSortOptimized(arr.copy())}")
