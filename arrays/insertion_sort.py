@@ -28,5 +28,3 @@ def insertionSortOptemized(arr:list):
 arr = [10, 3, 4, 6, 2, 7, 5, 1]
 print(f"Sorted: {insertionSort(arr.copy())}")
 print(f"Swap sorted: {insertionSortSwap(arr.copy())}")
-
-# arr[j], arr[i] = arr[i], arr[j]
