@@ -17,7 +17,7 @@ def insertionSortSwap(arr:list):
     for i in range(1, n):
         for j in range(i):
             if arr[j] > arr[i]:
-                arr[j], arr[i] = arr[i], arr[j]
+                arr[j], arr[i] = arr[i], arr[j] # this simulates a bubble sort
 
     return arr
 
@@ -27,7 +27,7 @@ def insertionSortOptemized(arr:list):
     for i in range(1, n):
         insert_index = i
         current_value = arr[i]
-        for j in range(i-1, -1, -1):
+        for j in range(i-1, -1, -1): # this allows for backward (right to left) iteration from i-1 to 0
             if arr[j] > current_value:
                 arr[j+1] = arr[j]
                 insert_index = j
