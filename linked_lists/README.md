@@ -1,4 +1,4 @@
-# Linked List
+## Linked List
 
 A **Linked List** is a linear data structure made up of nodes that are connected together in a chain-like structure, where each node contains two components: data and a refeo to the next node in the sequence. 
 
@@ -11,7 +11,7 @@ The **tail** refers to the last node, which points to 'null', signifying the end
 Types of linked lists - Singly, Doubly.
 
 
-## Singly Linked Lists
+### Singly Linked Lists
 
 A **Singly Linked List** consist of nodes with the following components:
 - **Data**: The value stored in the node.
