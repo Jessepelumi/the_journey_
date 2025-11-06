@@ -35,8 +35,17 @@ class SinglyLinkedList:
 
         last.next = new_node
 
-    def prepend(data):
-        pass
+    def prepends(self, data):
+        # create a new node
+        new_node = Node(data)
+
+        # check if it is an empty list or not
+        if not self.head:
+            self.head = new_node
+            return
+        
+        new_node.next = self.head
+        self.head = new_node
 
     def insert(data):
         pass
