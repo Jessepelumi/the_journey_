@@ -35,6 +35,7 @@ class SinglyLinkedList:
 
         last.next = new_node
 
+    # add a new node to the beginning of the list
     def prepends(self, data):
         # create a new node
         new_node = Node(data)
@@ -47,8 +48,22 @@ class SinglyLinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def insert(data):
-        pass
+    # add a new node after a given node
+    def insert(self, prev_node_data, data):
+        # create a new node
+        new_node = Node(data)
+
+        # transverse through the list to find prev_node_data
+        current = self.head
+        while current and current.data != prev_node_data:
+            current = current.next
+
+        if not current:
+            print(f"The node with data '{prev_node_data}' was not found.")
+            return
+        
+        new_node.next = current.next
+        current.next = new_node
 
     def delete(data):
         pass
