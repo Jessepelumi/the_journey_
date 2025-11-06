@@ -65,8 +65,29 @@ class SinglyLinkedList:
         new_node.next = current.next
         current.next = new_node
 
-    def delete(data):
-        pass
+    # remove a node from the list 
+    def delete(self, key):
+        # a node can be removed from the beginnign (head), end (tail), or middle (any other position)
+        current = self.head
+
+        # if the node to be removed is the head
+        if current and current.data == key:
+            self.head = current.next
+            current = None
+            return
+        
+        # if the node to be removed is not the head
+        prev = None  # track the node before the one to be removed
+        if current and current.data != key:
+            prev = current
+            current = current.next
+
+        if not current:
+            print(f"No node was deleted. Node with data '{key}' was not found.")
+            return
+        
+        prev.next = current.next
+        current = None
 
     def search(data):
         pass
