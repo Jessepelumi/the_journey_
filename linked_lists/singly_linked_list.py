@@ -36,7 +36,7 @@ class SinglyLinkedList:
         last.next = new_node
 
     # add a new node to the beginning of the list
-    def prepends(self, data):
+    def prepend(self, data):
         # create a new node
         new_node = Node(data)
 
@@ -78,7 +78,7 @@ class SinglyLinkedList:
         
         # if the node to be removed is not the head
         prev = None  # track the node before the one to be removed
-        if current and current.data != key:
+        while current and current.data != key:
             prev = current
             current = current.next
 
@@ -89,8 +89,24 @@ class SinglyLinkedList:
         prev.next = current.next
         current = None
 
-    def search(data):
-        pass
+    def search(self, key):
+        current = self.head
 
-    def printList():
-        pass
+        # transverse the list till current.data and key matches
+        while current and current.data != key:
+            current = current.next
+        
+        if not current:
+            print(f"No node was returned. Node with data '{key}' was not found.")
+            return
+        
+        return True
+
+    def printList(self):
+        current = self.head
+
+        while current:
+            print(current.data, end="->")
+            current = current.next
+
+        print("None")
