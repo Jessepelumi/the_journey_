@@ -1,4 +1,4 @@
-# Doubly linked list implementation 
+# Doubly linked list implementation
 
 # Node class
 class Node:
@@ -43,4 +43,42 @@ class DoublyLinkedList:
         new_node.next = self.head
         self.head.prev = new_node
         self.head = new_node
+
+    # insert a node after a given node
+    def insert(self, prev_node_data, data):
+        # create a new node
+        new_node =  Node(data)
+
+        # find the node 
+        current = self.head
+        while current and current.data != prev_node_data:
+            current = current.next
+
+        if not current:
+            print(f"No node was found. Node with data '{prev_node_data}' was not found.")
+            return
+        
+        next_node = current.next
+        if not next_node:
+            current.next = new_node
+            new_node.prev = current
+            return
+
+        new_node.next = next_node
+        next_node.prev = new_node
+        current.next = new_node
+        new_node.prev = current
+
+    # remove a node from the list
+    def delete(self, key):
+        # make sure the list is not empty 
+        # remove head node 
+        # remove other nodes 
+        current = self.head
+
+        if current and current.next == key:
+            self.head = current.next
+            self.head.prev = None
+            current = None
+            return
 
