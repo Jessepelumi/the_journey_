@@ -23,4 +23,19 @@ The operations that can be performed on a singly linked list are:
 - **Insert**: add a new node after a node with a given value.
 - **Delete**: remove a node with a specific value from the list.
 - **Search**: check if a value exist in the list.
-- **Print**: print all the elements in the list. 
+- **Print**: print all the elements in the list.
+
+### Doubly Linked Lists
+
+A **Doubly Linked List** consist of nodes with the following components:
+- **Data**: The value stored in the node.
+- **Next**: A reference to the next node in the list.
+- **Prev**: A reference to the previous node in the list.
+
+The operations that can be performed on a singly linked list are:
+- **Append**: add a new node to the end of the list.
+- **Prepend**: add a new node to the beginning of the list.
+- **Insert**: add a new node after a node with a given value.
+- **Delete**: remove a node with a specific value from the list.
+- **Search**: check if a value exist in the list.
+- **Print**: print all the elements in the list.
